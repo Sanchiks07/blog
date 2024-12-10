@@ -30,8 +30,14 @@ $statement->execute();
 // 3. Dabūt rezultātus
 $posts = $statement->fetchAll();
 
-echo "<pre>";
-var_dump($posts);
-echo "</pre>";
+dd($posts);
+
+// Dump and die
+function dd($data) {
+    echo "<pre>";
+    var_dump($data);
+    echo "</pre>";
+    die();
+}
 
 ?>
