@@ -1,8 +1,10 @@
 <?php
 
+require "functions.php";
+
 echo    "<style>
             body {
-                background-color: #FC8EAC;
+                background-color: #800808;
                 color: white;
                 font-size: 20px;
             }
@@ -12,7 +14,7 @@ echo "heloings! <br><br>";
 
 // 1. Izveidot datu bāzi ar tabulu ✔
 // 2. Savienot PHP ar datu bāzi ✔ (DSN, PDO)
-// 3. Ivadīt datus  (statement)
+// 3. Ivadīt datus ✔ (statement, dumb and die "dd")
 
 // db, nosaukums, parole, lietotājvārds
 // mysql_connect ❌
@@ -28,16 +30,8 @@ $statement = $pdo->prepare("SELECT * FROM posts");
 // 2. Izpildīt statement
 $statement->execute();
 // 3. Dabūt rezultātus
-$posts = $statement->fetchAll();
+$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 dd($posts);
-
-// Dump and die
-function dd($data) {
-    echo "<pre>";
-    var_dump($data);
-    echo "</pre>";
-    die();
-}
 
 ?>
