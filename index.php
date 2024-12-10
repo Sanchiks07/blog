@@ -14,7 +14,7 @@ echo "heloings! <br><br>";
 
 // 1. Izveidot datu bāzi ar tabulu ✔
 // 2. Savienot PHP ar datu bāzi ✔ (DSN, PDO)
-// 3. Ivadīt datus ✔ (statement, dumb and die "dd")
+// 3. Ivadīt datus uz HTML ✔ (statement, dumb and die "dd")
 
 // db, nosaukums, parole, lietotājvārds
 // mysql_connect ❌
@@ -30,8 +30,15 @@ $statement = $pdo->prepare("SELECT * FROM posts");
 // 2. Izpildīt statement
 $statement->execute();
 // 3. Dabūt rezultātus
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+$posts = $statement->fetchAll(PDO::FETCH_ASSOC); // const = 2
 
-dd($posts);
+// dd($posts[0] ["content"]);
+
+// Ar foreach izvadīt content
+echo "<ul>";
+foreach ($posts as $post) {
+    echo "<li>" . $post["content"] . "</li>";
+};
+echo "</ul>";
 
 ?>
