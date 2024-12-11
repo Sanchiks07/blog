@@ -1,6 +1,7 @@
 <?php
 
 require "functions.php";
+require "Database.php";
 
 echo    "<style>
             body {
@@ -13,24 +14,14 @@ echo    "<style>
 echo "heloings! <br><br>";
 
 // 1. Izveidot datu bāzi ar tabulu ✔
-// 2. Savienot PHP ar datu bāzi ✔ (DSN, PDO)
-// 3. Ivadīt datus uz HTML ✔ (statement, dumb and die "dd" + PDO)
+// 2. Savienot PHP ar datu bāzi ✔ (DSN, PDO) (Database.php)
+// 3. Ivadīt datus uz HTML ✔ (statement, dumb and die "dd" + PDO) (Database.php)
 
 // db, nosaukums, parole, lietotājvārds
 // mysql_connect ❌
 
-// Data Source Name
-$dsn = "mysql:host=localhost;port=3306;user=root;password=;dbname=blog_ipb23;charset=utf8mb4";
-
-// PDO - PHP Data Object (klase)
-$pdo = new PDO($dsn); // objekts = klase
-
-// 1. Sagatavot vaicājumu (statement)
-$statement = $pdo->prepare("SELECT * FROM posts"); // prepare("vaicājums") - metode
-// 2. Izpildīt statement
-$statement->execute(); // execute - metode
-// 3. Dabūt rezultātus
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC); // const = 2
+$db = new Database();
+$posts = $db->query("SELECT * FROM posts");
 
 // dd($posts[0] ["content"]);
 
