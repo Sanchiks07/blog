@@ -14,7 +14,7 @@ echo "heloings! <br><br>";
 
 // 1. Izveidot datu bāzi ar tabulu ✔
 // 2. Savienot PHP ar datu bāzi ✔ (DSN, PDO)
-// 3. Ivadīt datus uz HTML ✔ (statement, dumb and die "dd")
+// 3. Ivadīt datus uz HTML ✔ (statement, dumb and die "dd" + PDO)
 
 // db, nosaukums, parole, lietotājvārds
 // mysql_connect ❌
@@ -22,13 +22,13 @@ echo "heloings! <br><br>";
 // Data Source Name
 $dsn = "mysql:host=localhost;port=3306;user=root;password=;dbname=blog_ipb23;charset=utf8mb4";
 
-// PDO - PHP Data Object
-$pdo = new PDO($dsn);
+// PDO - PHP Data Object (klase)
+$pdo = new PDO($dsn); // objekts = klase
 
 // 1. Sagatavot vaicājumu (statement)
-$statement = $pdo->prepare("SELECT * FROM posts");
+$statement = $pdo->prepare("SELECT * FROM posts"); // prepare("vaicājums") - metode
 // 2. Izpildīt statement
-$statement->execute();
+$statement->execute(); // execute - metode
 // 3. Dabūt rezultātus
 $posts = $statement->fetchAll(PDO::FETCH_ASSOC); // const = 2
 

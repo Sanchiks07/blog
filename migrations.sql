@@ -1,3 +1,6 @@
+-- 0.
+DROP DATABASE IF EXISTS blog_ipb23;
+
 -- 1. izveidot datubāzi
 CREATE DATABASE blog_ipb23;
 
