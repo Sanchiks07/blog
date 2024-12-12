@@ -18,7 +18,7 @@ INSERT INTO posts
 (content)
 VALUES
 ("Ziemassvētki tuvojas!"),
-("Otrs bloga ieraksts"),
+("Pīles visticamāk var noslīkt"),
 ("Es lēnām mirstu lol");
 
 SELECT * FROM posts;

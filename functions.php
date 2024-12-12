@@ -8,4 +8,6 @@ function dd($data) {
     die();
 }
 
+// dd($posts[0] ["content"]); (tam ir jābūt index.php failā, lai strādātu)
+
 ?>
