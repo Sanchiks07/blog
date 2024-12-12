@@ -3,11 +3,14 @@
 require "functions.php";
 require "Database.php";
 
+$config = require ("config.php");
+
 echo    "<style>
             body {
                 background-color: #800808;
                 color: white;
                 font-size: 20px;
+                font-family: Consolas;
             }
         </style>";
 
@@ -21,7 +24,7 @@ echo "heloings! <br><br>";
 // db, nosaukums, parole, lietotājvārds
 // mysql_connect ❌
 
-$db = new Database();
+$db = new Database($config["database"]);
 $posts = $db->query("SELECT * FROM posts")->fetchAll(PDO::FETCH_ASSOC);
 
 // Ar foreach izvadīt content

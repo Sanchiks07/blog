@@ -4,9 +4,9 @@ class Database {
     public $pdo;
 
     // Konstruktors - izpildās vienu reizi, kad objekts uztaisīts
-    public function __construct() { // izpildās jau uzreiz, tpc nevajag connect
+    public function __construct($config) { // izpildās jau uzreiz, tpc nevajag connect
         // DSN - Data Source Name
-        $dsn = "mysql:host=localhost;port=3306;user=root;password=;dbname=blog_ipb23;charset=utf8mb4";
+        $dsn = "mysql:" . http_build_query($config, "", ";");
         // PDO - PHP Data Object (klase)
         $this->pdo = new PDO($dsn); // objekts = klase
         $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
