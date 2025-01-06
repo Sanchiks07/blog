@@ -5,16 +5,12 @@ require "Database.php";
 
 $config = require ("config.php");
 
-echo    "<style>
-            body {
-                background-color: #800808;
-                color: white;
-                font-size: 20px;
-                font-family: Consolas;
-            }
-        </style>";
+// Mērķis: Uztaisīt filtru - ierakstu meklēšana (06.01.25.)
+// 1. Izveidot moklēšnas joslu: HTML forma, kurā ir inout un submit poga
+// 2. Kaut kā sarakst;it PHP
+// 3. Atgriezt datus no SQL datu bāzes
 
-echo "heloings! <br><br>";
+echo "<link rel='stylesheet' href='blog.css'>";
 
 // 1. Izveidot datu bāzi ar tabulu ✅
 // 2. Savienot PHP ar datu bāzi ✅ (DSN, PDO) (Database.php)
@@ -26,6 +22,13 @@ echo "heloings! <br><br>";
 
 $db = new Database($config["database"]);
 $posts = $db->query("SELECT * FROM posts")->fetchAll(PDO::FETCH_ASSOC);
+
+echo "<h1>Blogs</h1>";
+
+echo "<form>";
+echo "<input />";
+echo "<button>Meklēt</button>";
+echo "</form>";
 
 // Ar foreach izvadīt content
 echo "<ul>";
