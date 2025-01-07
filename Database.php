@@ -12,11 +12,12 @@ class Database {
         $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     }
 
-    public function query($sql) {
-        // 1. Sagatavot vaicājumu (statement)
+    public function query($sql, $params) {
+        // 1. Sagatavot vaicājumu
         $statement = $this->pdo->prepare($sql); // prepare("vaicājums") - metode
-        // 2. Izpildīt statement
-        $statement->execute(); // execute - metode
+        // 2. Izpildīt vaicājumu
+        $statement->execute($params); // execute - metode 
+        // params ir tas, ko biegās pa īstam izpilda
         return $statement;
     }
 }

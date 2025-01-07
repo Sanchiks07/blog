@@ -12,9 +12,7 @@ $config = require ("config.php");
 // 3. Ivadīt datus uz HTML ✅ (statement, dumb and die "dd" + PDO) (Database.php)
 
 // fetchAll(PDO::FETCH_ASSOC) - Dabūt rezultātus kā asociatīvo masīvu, const = 2
-
-// db, nosaukums, parole, lietotājvārds
-// mysql_connect ❌
+// " \"nam " - \ nozīmē "escape", lai nākamās pēdiņas neņem kā nobeigumu priekš simbolu virknes
 
 // Mērķis: Uztaisīt filtru - ierakstu meklēšana (06.01.25.)
 // 1. Izveidot moklēšnas joslu: HTML forma, kurā ir input un submit poga ✅
@@ -22,11 +20,15 @@ $config = require ("config.php");
 // 3. Atgriezt datus no SQL datu bāzes ✅
 
 $db = new Database($config["database"]);
-$posts = $db->query("SELECT * FROM posts;")->fetchAll();
 
+$select = "SELECT * FROM posts";
+$params = [];
 if (isset($_GET["search_query"]) && $_GET["search_query"] !="") {
-    $posts = $db->query("SELECT * FROM posts WHERE content LIKE '%" . $_GET["search_query"] . "%';")->fetchAll();
-};
+    $search_query = "%" . $_GET["search_query"] . "%";
+    $select .= " WHERE content LIKE :nosaukums;"; // Sagatavotais vaicājums
+    $params = ["nosaukums" => $search_query]; // Saistītais parametrs
+}
+$posts = $db->query($select, $params)->fetchAll();
 
 echo "<h1>Blogsss</h1>";
 
@@ -34,6 +36,10 @@ echo "<form>";
 echo "<input name='search_query' />";
 echo "<button>Meklēt</button>";
 echo "</form>";
+
+if (count($posts) == 0) {
+    echo "Netika atrasts neviens ieraksts";
+}
 
 // Ar foreach izvadīt content
 echo "<ul>";
