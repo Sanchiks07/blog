@@ -2,15 +2,9 @@
 
 require "functions.php";
 require "Database.php";
+echo "<link rel='stylesheet' href='blog.css'>";
 
 $config = require ("config.php");
-
-// Mērķis: Uztaisīt filtru - ierakstu meklēšana (06.01.25.)
-// 1. Izveidot moklēšnas joslu: HTML forma, kurā ir input un submit poga ✅
-// 2. Kaut kā sarakstīt PHP ✅
-// 3. Atgriezt datus no SQL datu bāzes ✅
-
-echo "<link rel='stylesheet' href='blog.css'>";
 
 // 1. Izveidot datu bāzi ar tabulu ✅
 // 2. Savienot PHP ar datu bāzi ✅ (DSN, PDO) (Database.php)
@@ -20,6 +14,11 @@ echo "<link rel='stylesheet' href='blog.css'>";
 
 // db, nosaukums, parole, lietotājvārds
 // mysql_connect ❌
+
+// Mērķis: Uztaisīt filtru - ierakstu meklēšana (06.01.25.)
+// 1. Izveidot moklēšnas joslu: HTML forma, kurā ir input un submit poga ✅
+// 2. Kaut kā sarakstīt PHP ✅
+// 3. Atgriezt datus no SQL datu bāzes ✅
 
 $db = new Database($config["database"]);
 $posts = $db->query("SELECT * FROM posts;")->fetchAll();

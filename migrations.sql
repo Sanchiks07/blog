@@ -17,8 +17,8 @@ CREATE TABLE posts (
 INSERT INTO posts
 (content)
 VALUES
-("Ziemassvētki tuvojas!"),
-("Pīles visticamāk var noslīkt"),
-("Es lēnām mirstu lol");
+("Lieldienas tuvojas!"),
+("Mākonis sver aptuveni miljons tonnu."),
+("Vai ūdens ir slpajš?");
 
 SELECT * FROM posts;
