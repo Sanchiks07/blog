@@ -1,8 +1,9 @@
 <?php
 
+echo "<link rel='stylesheet' href='blog.css'>";
+
 require "functions.php";
 require "Database.php";
-echo "<link rel='stylesheet' href='blog.css'>";
 
 $config = require ("config.php");
 
@@ -27,7 +28,7 @@ if (isset($_GET["search_query"]) && $_GET["search_query"] !="") {
     $posts = $db->query("SELECT * FROM posts WHERE content LIKE '%" . $_GET["search_query"] . "%';")->fetchAll();
 };
 
-echo "<h1>Blogs</h1>";
+echo "<h1>Blogsss</h1>";
 
 echo "<form>";
 echo "<input name='search_query' />";
