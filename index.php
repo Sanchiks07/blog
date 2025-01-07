@@ -1,7 +1,6 @@
 <?php
 
 echo "<link rel='stylesheet' href='blog.css'>";
-
 require "functions.php";
 require "Database.php";
 
