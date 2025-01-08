@@ -1,0 +1,14 @@
+1. Parasts if-else operators
+if (isset($x)) {
+    $y = $x
+} else {
+    $y = "nav vērtības"
+}
+
+
+2. Ternary Operator - Trīskāršais Operators
+$y = isset($x) ? $x : "nav vērtības"
+
+
+3. Null Coalecing Operator
+$y = $x ?? "nav vērtības"

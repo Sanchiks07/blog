@@ -1,6 +1,7 @@
 <?php
 
-echo "<link rel='stylesheet' href='categories.css'>";
+echo "<link rel='stylesheet' href='categories_style.css'>";
+require "functions.php";
 require "Database.php";
 
 $config = require ("config.php");
@@ -33,5 +34,7 @@ foreach ($categories as $category) {
 }
 echo "</ul>";
 echo "</div>"; // aizver container div
+
+require "views/index.view.php";
 
 ?>

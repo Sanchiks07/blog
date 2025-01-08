@@ -1,6 +1,5 @@
 <?php
 
-echo "<link rel='stylesheet' href='blog.css'>";
 require "functions.php";
 require "Database.php";
 
@@ -29,22 +28,6 @@ if (isset($_GET["search_query"]) && $_GET["search_query"] !="") {
 }
 $posts = $db->query($select, $params)->fetchAll();
 
-echo "<h1>Blogsss</h1>";
-
-echo "<form>";
-echo "<input name='search_query' />";
-echo "<button>Meklēt</button>";
-echo "</form>";
-
-if (count($posts) == 0) {
-    echo "Netika atrasts neviens ieraksts";
-}
-
-// Ar foreach izvadīt content
-echo "<ul>";
-foreach ($posts as $post) {
-    echo "<li>" . $post["content"] . "</li>";
-};
-echo "</ul>";
+require "views/index.view.php"; // vienmēr atrodas faila pēdējā rindā
 
 ?>
