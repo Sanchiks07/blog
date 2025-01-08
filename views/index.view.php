@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <div class="container">
     <h1>Blogsss</h1>
 
@@ -25,7 +24,9 @@
             <li> <?= $post["content"] ?> </li> <!-- "?=" īsā php izvade (aizstāj - php echo) -->
         <?php } ?>
     </ul>
-    </div>
 
+    <button type="button" onclick="window.location.href='categories.php';">Kategorijas</button>
+    <button type="button" onclick="window.location.href='story.php';">Story</button>
+    </div>
 </body>
 </html>

@@ -25,6 +25,9 @@
             <li> <?= $category["category_name"] ?> </li>
         <?php } ?>
     </ul>
+
+    <button type="button" onclick="window.location.href='index.php';">Blogs</button>
+    <button type="button" onclick="window.location.href='story.php';">Story</button>
     </div>
 
 </body>
