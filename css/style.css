@@ -15,8 +15,11 @@ body {
     padding: 20px;
 }
 
-ul li {
+ul {
     list-style-type: none;
     padding: 0;
-    margin: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
 }

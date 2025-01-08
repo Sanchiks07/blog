@@ -16,14 +16,14 @@
         <button>Meklēt</button>
     </form>
 
-    <?php if (count($posts) == 0) {?>
+    <?php if (count($posts) == 0) { ?>
         <p>Netika atrasts neviens ieraksts</p>
     <?php } ?>
 
     <ul>
         <?php foreach ($posts as $post) { ?>
             <li> <?= $post["content"] ?> </li> <!-- "?=" īsā php izvade (aizstāj - php echo) -->
-        <?php }; ?>
+        <?php } ?>
     </ul>
     </div>
 
