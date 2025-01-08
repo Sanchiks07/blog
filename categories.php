@@ -1,6 +1,5 @@
 <?php
 
-echo "<link rel='stylesheet' href='categories_style.css'>";
 require "functions.php";
 require "Database.php";
 
@@ -16,25 +15,6 @@ if (isset($_GET["search_query"]) && $_GET["search_query"] != "") {
 }
 $categories = $db->query($select, $params)->fetchAll();
 
-echo "<div class='container'>"; // atver container div
-echo "<h1>Kategorijas</h1>";
-
-echo "<form>";
-echo "<input name='search_query' />";
-echo "<button>Meklēt</button>";
-echo "</form>";
-
-if (count($categories) == 0) {
-    echo "Kategorija netika atrasta";
-}
-
-echo "<ul>";
-foreach ($categories as $category) {
-    echo "<li>" . $category["category_name"] . "</li>";
-}
-echo "</ul>";
-echo "</div>"; // aizver container div
-
-require "views/index.view.php";
+require "views/categories.view.php";
 
 ?>
