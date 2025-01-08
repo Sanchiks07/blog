@@ -1,6 +1,6 @@
 <?php
 
-$title = "nam nam";
+$title = "CodeFlow";
 
 require "views/story.view.php";
 
