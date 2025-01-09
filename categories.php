@@ -15,6 +15,8 @@ if (isset($_GET["search_query"]) && $_GET["search_query"] != "") {
 }
 $categories = $db->query($select, $params)->fetchAll();
 
+$pageTitle = "Kategorijas";
+$style = "css/style.css";
 require "views/categories.view.php";
 
 ?>

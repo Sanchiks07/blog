@@ -58,7 +58,7 @@ ul li {
 
 ul li:hover {
     transform: scale(1.1);
-    color: #ce53ff;
+    color: #d25fff;
     font-weight: bold;
     cursor: default;
 }

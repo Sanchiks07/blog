@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="lv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kategorijas</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<?php require "components/header.php" ?>
 
     <div class="container"><div class="button-container">
-            <button class="pogas" onclick="window.location.href='index.php';">Blogs</button>
-            <button class="pogas" onclick="window.location.href='story.php';">Story</button>
-        </div>
+        <button class="pogas" onclick="window.location.href='index.php';">Blogs</button>
+        <button class="pogas" onclick="window.location.href='story.php';">Story</button>
+    </div>
 
     <h1>Kategorijas</h1>
 
@@ -29,9 +21,5 @@
             <li> <?= $category["category_name"] ?> </li>
         <?php } ?>
     </ul>
-
-    
     </div>
-
-</body>
-</html>
+<?php require "components/footer.php" ?>

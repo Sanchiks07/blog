@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="lv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<?php require "components/header.php" ?> <!-- obligāti jāpieraksta php, lai strādātu -->
+
     <div class="container">
         <div class="button-container">
             <button class="pogas" onclick="window.location.href='categories.php';">Kategorijas</button>
@@ -29,5 +22,4 @@
             <?php } ?>
         </ul>
     </div>
-</body>
-</html>
+<?php require "components/footer.php" ?>
