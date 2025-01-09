@@ -45,18 +45,18 @@ button {
 }
 
 /* izvads */
-ul {
+.izvads {
     list-style-type: none;
     padding: 0;
 }
 
-ul li {
+.izvads li {
     margin-bottom: 10px;
     transition: transform 0.3s ease;
     color: #bc13fe;
 }
 
-ul li:hover {
+.izvads li:hover {
     transform: scale(1.1);
     color: #d25fff;
     font-weight: bold;
@@ -68,4 +68,33 @@ input {
     width: 200px;
     height: 20px;
     border: 2px solid white;
+}
+
+/* navbar */
+header {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    border-bottom: 1px solid black;
+    box-shadow: 7px 0 10px black;
+}
+
+header ul {
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+header ul li{
+    padding: 7px;
+}
+
+header a {
+    text-decoration-line: none;
+    color: #1365fe;
+}
+
+header a:hover {
+    color: #528fff;
 }

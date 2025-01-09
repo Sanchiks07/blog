@@ -1,4 +1,5 @@
 <?php require "components/header.php" ?> <!-- obligāti jāpieraksta php, lai strādātu -->
+<?php require "components/navbar.php" ?>
 
     <div class="container">
         <div class="button-container">
@@ -16,7 +17,7 @@
             <p>Netika atrasts neviens ieraksts</p>
         <?php } ?>
 
-        <ul>
+        <ul class="izvads">
             <?php foreach ($posts as $post) { ?>
                 <li> <?= $post["content"] ?> </li> <!-- "?=" īsā php izvade (aizstāj - php echo) -->
             <?php } ?>

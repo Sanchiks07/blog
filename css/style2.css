@@ -45,3 +45,8 @@ button {
     border: 2px solid white;
     background-color: white;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}

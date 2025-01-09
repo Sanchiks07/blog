@@ -1,4 +1,5 @@
 <?php require "components/header.php" ?>
+<?php require "components/navbar.php" ?>
 
     <div class="container">
         <div class="button-container">
