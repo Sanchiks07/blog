@@ -2,10 +2,6 @@
 <?php require "components/navbar.php" ?>
 
     <div class="container">
-        <div class="button-container">
-            <button class="pogas" onclick="window.location.href='index.php';">Blogs</button>
-            <button class="pogas" onclick="window.location.href='categories.php';">Kategorijas</button>
-        </div>
         <h1>Blogu revolūcija: populārās blogu platformas <em><?= $title ?></em> stāsts</h1>
 
         <p>

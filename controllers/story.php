@@ -1,5 +1,7 @@
 <?php
 
+require "index.php";
+
 $title = "CodeFlow";
 
 $pageTitle = "Story";

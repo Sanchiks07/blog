@@ -1,17 +1,16 @@
 <?php
-
-require "functions.php";
-require "index.php";
+ 
+require_once "index.php";
 
 $uri = parse_url($_SERVER["REQUEST_URI"])["path"];
 
-if ($uri == "/" ) {
+if ($uri == "/") {
     require "controllers/index.php";
 }
-else if ($uri == "about") {
+else if ($uri == "/about") {
     require "controllers/story.php";
 }
-else if ($uri == "categories") {
+else if ($uri == "/categories") {
     require "controllers/categories.php";
 }
 else {

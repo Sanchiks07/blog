@@ -1,5 +1,7 @@
 <?php
 
+require "index.php";
+
 $select = "SELECT * FROM categories";
 $params = [];
 if (isset($_GET["search_query"]) && $_GET["search_query"] != "") {

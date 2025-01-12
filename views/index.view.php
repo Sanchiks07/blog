@@ -2,10 +2,6 @@
 <?php require "components/navbar.php" ?>
 
     <div class="container">
-        <div class="button-container">
-            <button class="pogas" onclick="window.location.href='categories.php';">Kategorijas</button>
-            <button class="pogas" onclick="window.location.href='story.php';">Story</button>
-        </div>
         <h1>Blogs</h1>
 
         <form>
