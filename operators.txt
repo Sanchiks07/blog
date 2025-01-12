@@ -1,4 +1,4 @@
-1. Parasts if-else operators
+1. Parasts if-else funkcija
 if (isset($x)) {
     $y = $x
 } else {
