@@ -13,7 +13,7 @@
             <p>Netika atrasts neviens ieraksts</p>
         <?php } ?>
 
-        <ul class="izvads">
+        <ul>
             <?php foreach ($posts as $post) { ?>
                 <li> <?= $post["content"] ?> </li> <!-- "?=" īsā php izvade (aizstāj - php echo) -->
             <?php } ?>

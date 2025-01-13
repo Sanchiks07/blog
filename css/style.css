@@ -36,17 +36,22 @@ button {
     padding: 0;
 }
 
-.izvads li {
+ul li {
     margin-bottom: 10px;
     transition: transform 0.3s ease;
     color: #bc13fe;
 }
 
-.izvads li:hover {
+ul li:hover {
     transform: scale(1.1);
     color: #d25fff;
     font-weight: bold;
     cursor: default;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 input {

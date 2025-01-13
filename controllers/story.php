@@ -4,7 +4,7 @@ require "index.php";
 
 $title = "CodeFlow";
 
-$pageTitle = "Story";
+$pageTitle = "Par mums";
 $style = "css/style2.css";
 require "views/story.view.php";
 
