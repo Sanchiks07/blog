@@ -1,5 +1,5 @@
-<?php require "components/header.php" ?> <!-- obligāti jāpieraksta php, lai strādātu -->
-<?php require "components/navbar.php" ?>
+<?php require "views/components/header.php" ?> <!-- obligāti jāpieraksta php, lai strādātu -->
+<?php require "views/components/navbar.php" ?>
 
     <div class="container">
         <h1>Blogs</h1>
@@ -15,8 +15,8 @@
 
         <ul>
             <?php foreach ($posts as $post) { ?>
-                <li> <?= $post["content"] ?> </li> <!-- "?=" īsā php izvade (aizstāj - php echo) -->
+                <li><a href="show?id=<?= $post["id"] ?>"> <?= $post["content"] ?> </a></li> <!-- "?=" īsā php izvade (aizstāj - php echo) -->
             <?php } ?>
         </ul>
     </div>
-<?php require "components/footer.php" ?>
+<?php require "views/components/footer.php" ?>
