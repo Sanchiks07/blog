@@ -12,6 +12,8 @@ if (!$post) {
     redirectIfNotFound();
 }
 
+$pageTitle = "Bloga ieraksts";
+$style = "css/style3.css";
 require "views/posts/show.view.php";
 
 ?>

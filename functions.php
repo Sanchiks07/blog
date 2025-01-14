@@ -14,6 +14,4 @@ function redirectIfNotFound($location = "/") {
     exit(); // tāds pats kā die(), bet maigāks
 }
 
-// dd($posts[0] ["content"]); (tam ir jābūt index.php failā, lai strādātu)
-
 ?>

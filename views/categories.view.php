@@ -13,10 +13,10 @@
             <p>Kategorija netika atrasta</p>
         <?php } ?>
 
-        <ul class="izvads">
+        <ol>
             <?php foreach ($categories as $category) { ?>
                 <li> <?= $category["category_name"] ?> </li>
             <?php } ?>
-        </ul>
+        </ol>
     </div>
 <?php require "components/footer.php" ?>

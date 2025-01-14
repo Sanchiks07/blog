@@ -13,10 +13,10 @@
             <p>Netika atrasts neviens ieraksts</p>
         <?php } ?>
 
-        <ul>
+        <ol>
             <?php foreach ($posts as $post) { ?>
                 <li><a href="show?id=<?= $post["id"] ?>"> <?= $post["content"] ?> </a></li> <!-- "?=" īsā php izvade (aizstāj - php echo) -->
             <?php } ?>
-        </ul>
+        </ol>
     </div>
 <?php require "views/components/footer.php" ?>
