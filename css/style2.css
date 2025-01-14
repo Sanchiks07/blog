@@ -19,11 +19,6 @@ body {
     height: auto;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
 /* navbar */
 header {
     display: flex;
@@ -51,4 +46,9 @@ header a {
 
 header a:hover {
     color: #528fff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }

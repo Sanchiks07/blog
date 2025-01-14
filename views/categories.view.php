@@ -13,7 +13,7 @@
             <p>Kategorija netika atrasta</p>
         <?php } ?>
 
-        <ul>
+        <ul class="izvads">
             <?php foreach ($categories as $category) { ?>
                 <li> <?= $category["category_name"] ?> </li>
             <?php } ?>
