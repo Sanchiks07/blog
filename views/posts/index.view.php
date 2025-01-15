@@ -15,7 +15,7 @@
 
         <ol>
             <?php foreach ($posts as $post) { ?>
-                <li><a href="show?id=<?= $post["id"] ?>"> <?= $post["content"] ?> </a></li> <!-- "?=" īsā php izvade (aizstāj - php echo) -->
+                <li><a href="show?id=<?= $post["id"] ?>"> <?= htmlspecialchars($post["content"]) ?> </a></li> <!-- "?=" īsā php izvade (aizstāj - php echo) -->
             <?php } ?>
         </ol>
     </div>
