@@ -1,20 +1,17 @@
 <?php
 
-require "views/posts/create.view.php";
-
-dd($_SERVER["REQUEST_METHOD"]);
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $sql = "INSERT INTO posts (content) VALUES (:content)";
     $params = ["content" => $_POST["content"]];
-    
-    executeQuery($sql, $params);
+    $post = $db->query($sql, $params)->fetch();
     
     header("Location: /");
     exit();
 }
 
 $pageTitle = "Izveidot ierakstu";
+$style = "css/style.css";
+require "views/posts/create.view.php";
 
 ?>

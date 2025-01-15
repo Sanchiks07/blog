@@ -10,6 +10,13 @@ body {
     margin: 0;
 }
 
+h1 {
+    color: #ad12eb;
+}
+
+p {
+    font-size: 20px;
+}
 .container {
     text-align: center;
     padding: 20px;
@@ -17,7 +24,7 @@ body {
 }
 
 /* pogas */
-.search {
+.search_save {
     width: auto;
     height: 27px;
     font-size: 15px;
@@ -44,12 +51,11 @@ ol {
 ol li {
     margin-bottom: 10px;
     transition: transform 0.3s ease;
-    color: #ad12eb;
 }
 
 ol li:hover {
     transform: scale(1.1);
-    color: #cd4fff;
+    color: #87cdee;
     font-weight: bold;
     cursor: default;
 }

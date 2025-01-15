@@ -6,7 +6,7 @@
 
         <form>
             <input name="search_query" value=<?= $_GET["search_query"] ?? "" ?>/>
-            <button class="search"><img src="css/search.png" height=15px width=auto> Meklēt</button>
+            <button class="search_save"><img src="css/search.png" height=15px width=auto> Meklēt</button>
             </form>
 
         <?php if (count($categories) == 0) { ?>
