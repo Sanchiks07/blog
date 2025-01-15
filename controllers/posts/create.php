@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $pageTitle = "Izveidot ierakstu";
 $style = "css/style.css";
+$style2 = "css/kop-style.css";
 require "views/posts/create.view.php";
 
 ?>

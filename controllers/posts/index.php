@@ -25,6 +25,7 @@ $posts = $db->query($select, $params)->fetchAll();
 
 $pageTitle = "Blogs";
 $style = "css/style.css";
+$style2 = "css/kop-style.css";
 require "views/posts/index.view.php"; // vienmēr atrodas faila pēdējā rindā
 
 ?>

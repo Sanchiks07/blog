@@ -14,6 +14,7 @@ if (!$post) {
 
 $pageTitle = "Bloga ieraksts";
 $style = "css/style3.css";
+$style2 = "css/kop-style.css";
 require "views/posts/show.view.php";
 
 ?>
