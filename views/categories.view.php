@@ -5,7 +5,7 @@
         <h1>Kategorijas</h1>
 
         <form>
-            <input name="search_query" value="<?= $_GET["search_query"] ?? "" ?>"/>
+            <input name="search_query" value="<?= $_GET["search_query"] ?? "" ?>" placeholder="Meklēt.." />
             <button class="search_save"><img src="css/search.png" height=15px width=auto> Meklēt</button>
             </form>
 

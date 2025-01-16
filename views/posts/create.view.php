@@ -12,8 +12,12 @@
     </p>
 
     <form method="POST">
-        <label><input name="content" /></label>
+        <label><input class="ieraksts" name="content" value="<?= $_POST['content'] ?? "" ?>" placeholder="Izveidot ierakstu.." /></label>
         <button class="search_save">Saglabāt</button>
+        
+        <?php if(isset($errors["content"])) { ?>
+            <p class="error"><?= $errors["content"] ?></p>
+        <?php } ?>
     </form>
 </div>
 <?php require "views/components/footer.php" ?>
