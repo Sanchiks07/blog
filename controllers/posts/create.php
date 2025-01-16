@@ -1,10 +1,12 @@
 <?php
 
+require "Validator.php";
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $errors = [];
 
-    if (!isset($_POST["content"]) == true || strlen($_POST["content"]) == 0 || strlen($_POST["content"]) > 50) {
+    if (!Validator::string($_POST["content"], max: 50)) {
         $errors["content"] = "Saturam jābūt ievadītam, bet ne garākam par 50 rakstzīmēm";
     }
     else if (empty($errors)) {
