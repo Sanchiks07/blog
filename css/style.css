@@ -6,6 +6,11 @@ p {
     font-size: 20px;
 }
 
+label textarea {
+    height: 70px;
+    width: 500px;
+}
+
 .error {
     color: #e00000;
 }

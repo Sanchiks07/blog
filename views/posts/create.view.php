@@ -12,9 +12,9 @@
     </p>
 
     <form method="POST">
-        <label><input class="ieraksts" name="content" value="<?= $_POST['content'] ?? "" ?>" placeholder="Izveidot ierakstu.." /></label>
+        <label><textarea class="ieraksts" name="content" value="" placeholder="Izveidot ierakstu.." ><?= $_POST['content'] ?? "" ?></textarea></label><br>
         <button class="search_save">Saglabāt</button>
-        
+
         <?php if(isset($errors["content"])) { ?>
             <p class="error"><?= $errors["content"] ?></p>
         <?php } ?>
