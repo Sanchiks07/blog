@@ -1,7 +1,7 @@
 <?php
 
 class Database {
-    public $pdo;
+    public $pdo;    // iemesls kpc nevar būt statiska funkcija, jo tas ir tas kopīgais mainīgis, kuru vajag abām funkcijā,
 
     // Konstruktors - izpildās vienu reizi, kad objekts uztaisīts
     public function __construct($config) { // izpildās jau uzreiz, tpc nevajag connect
