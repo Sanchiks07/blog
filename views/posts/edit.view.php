@@ -13,6 +13,11 @@
             <input type="text" name ="content" value="<?= $post['content'] ?? "" ?>" id="ieraksts" />
             <button type="submit">Saglabāt</button>
         </label>
+
+        <?php if(isset($errors["content"])) { ?>
+            <p class="error"><?= $errors["content"] ?></p>
+        <?php } ?>
+        
     </form>
 </div>
     
