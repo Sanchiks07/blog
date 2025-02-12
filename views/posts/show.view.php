@@ -4,7 +4,7 @@
 <div class="container">
     <h1><?= htmlspecialchars($post["content"]) ?></h1>
 
-    <button><a href="edit?id=<?= $post["id"] ?>">Rediģēt</button>
+    <button><a href="edit?id=<?= $post["id"] ?>">Rediģēt</a></button>
 
     <form method="POST" action="/delete">
         <input name="id" value="<?= $post["id"] ?>" type="hidden" />
