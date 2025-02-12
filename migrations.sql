@@ -15,11 +15,12 @@ CREATE TABLE posts (
 
 -- 4. ielikt saturu post tabulā
 INSERT INTO posts
-(content)
+(content, category_id)
 VALUES
 ("Lieldienas tuvojas!"),
 ("Mākonis sver aptuveni miljons tonnu."),
-("Vai ūdens ir slpajš?");
+("Vai ūdens ir slpajš?"),
+("14. uzdevums ir elle", 1);
 
 SELECT * FROM posts;
 
