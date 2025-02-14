@@ -10,16 +10,17 @@ USE blog_ipb23;
 -- 3. iezveidot tabulu
 CREATE TABLE posts (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	content VARCHAR(5200)
+	content VARCHAR(5200),
+	category_id INT
 );
 
 -- 4. ielikt saturu post tabulā
 INSERT INTO posts
 (content, category_id)
 VALUES
-("Lieldienas tuvojas!"),
-("Mākonis sver aptuveni miljons tonnu."),
-("Vai ūdens ir slpajš?"),
+("Lieldienas tuvojas!", 1),
+("Mākonis sver aptuveni miljons tonnu.", 1),
+("Vai ūdens ir slpajš?", 2),
 ("14. uzdevums ir elle", 1);
 
 SELECT * FROM posts;
