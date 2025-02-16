@@ -13,8 +13,8 @@ if (!$post) {
 }
 
 $pageTitle = "Kategorija";
-$style = "css/style3.css";
-$style2 = "css/kop-style.css";
+$style = "/css/style3.css";
+$style2 = "/css/kop-style.css";
 require "views/categories/show.view.php";
 
 ?>

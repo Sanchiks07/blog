@@ -26,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $pageTitle = "Rediģēt kategoriju";
-$style = "css/style.css";
-$style2 = "css/kop-style.css";
+$style = "/css/style.css";
+$style2 = "/css/kop-style.css";
 require "views/categories/edit.view.php";
 
 ?>

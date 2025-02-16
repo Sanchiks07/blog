@@ -3,6 +3,7 @@
 
 <div class="container">
     <h1><?= htmlspecialchars($post["content"]) ?></h1>
+    <p><?= $post["category_name"] ?></p>
 
     <button><a href="edit?id=<?= $post["id"] ?>">Rediģēt</a></button>
 

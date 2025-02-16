@@ -12,12 +12,23 @@
     </p>
 
     <form method="POST">
-        <label><textarea class="ieraksts" name="content" placeholder="Izveidot ierakstu.." ><?= $_POST['content'] ?? "" ?></textarea></label><br>
-        <button class="search_save">Saglabāt</button>
+        <label><textarea class="ieraksts" name="content" placeholder="Izveidot ierakstu.." ><?= $_POST['content'] ?? "" ?></textarea></label>
+
+        <select name="category">
+            <?php foreach ($categories as $category){ ?>
+                <option value="<?= $category['id'] ?>">
+                    <?= $category['category_name'] ?>
+                </option>
+            <?php } ?>
+        </select>
+
+        
+        <br><button class="search_save">Saglabāt</button>
 
         <?php if(isset($errors["content"])) { ?>
             <p class="error"><?= $errors["content"] ?></p>
         <?php } ?>
     </form>
 </div>
+
 <?php require "views/components/footer.php" ?>

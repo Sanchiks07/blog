@@ -2,6 +2,10 @@
 
 require "Validator.php";
 
+$sql = "SELECT * FROM categories";
+$params = [];
+$categories = $db->query($sql, $params)->fetch();
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $errors = [];

@@ -20,8 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $pageTitle = "Izveidot kategoriju";
-$style = "css/style.css";
-$style2 = "css/kop-style.css";
+$style = "/css/style.css";
+$style2 = "/css/kop-style.css";
 require "views/categories/create.view.php";
 
 ?>
