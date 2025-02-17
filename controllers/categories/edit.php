@@ -5,7 +5,7 @@ require "Validator.php";
 if(isset($_GET["id"])) {
     $sql = "SELECT * FROM categories WHERE id = :id;";
     $params = ["id" => $_GET["id"]];
-    $post = $db->query($sql, $params)->fetch();
+    $category = $db->query($sql, $params)->fetch();
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,9 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else if (empty($errors)) {
         $sql = "UPDATE categories SET category_name = :category_name WHERE id = :id;";
         $params = ["category_name" => $_POST["category_name"], "id" => $_POST["id"]];
-        $post = $db->query($sql, $params)->fetch();
+        $category = $db->query($sql, $params)->fetch();
         
-        header("Location: /show?id=" . $_POST["id"]);
+        header("Location: /categories/index");
         exit();
     }
 }

@@ -6,11 +6,11 @@
 
     <form method="POST">
         <label>
-            <input type="hidden" name="id" value="<?= $post['id'] ?>" />
+            <input type="hidden" name="id" value="<?= $category["id"] ?>" />
         </label>
 
         <label>
-            <input type="text" name ="category_name" value="<?= $post["category_name"] ?? "" ?>" id="kategorija" />
+            <input type="text" name ="category_name" value="<?= $category["category_name"] ?? "" ?>" id="kategorija" />
             <button type="submit">Saglabāt</button>
         </label>
 

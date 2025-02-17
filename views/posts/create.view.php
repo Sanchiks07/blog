@@ -14,15 +14,14 @@
     <form method="POST">
         <label><textarea class="ieraksts" name="content" placeholder="Izveidot ierakstu.." ><?= $_POST['content'] ?? "" ?></textarea></label>
 
-        <select name="category">
+        <select name="category_id">
             <?php foreach ($categories as $category){ ?>
-                <option value="<?= $category['id'] ?>">
-                    <?= $category['category_name'] ?>
+                <option value="<?= $category["id"] ?>" <?= (isset($_POST["category_id"]) && $_POST["category_id"] == $category["id"]) ? "selected" : "" ?>>
+                <?= $category["category_name"] ?>
                 </option>
             <?php } ?>
         </select>
 
-        
         <br><button class="search_save">Saglabāt</button>
 
         <?php if(isset($errors["content"])) { ?>

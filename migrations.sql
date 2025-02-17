@@ -20,7 +20,7 @@ INSERT INTO posts
 VALUES
 ("Lieldienas tuvojas!", 1),
 ("Mākonis sver aptuveni miljons tonnu.", 1),
-("Vai ūdens ir slpajš?", 2),
+("Vai ūdens ir slapjš?", 2),
 ("14. uzdevums ir elle", 1);
 
 SELECT * FROM posts;

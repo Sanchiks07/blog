@@ -4,13 +4,9 @@
     <div class="container">
         <h1>Kategorijas</h1>
 
-        <?php
-            
-        ?>
-
         <ol>
             <?php foreach ($categories as $category) { ?>
-                <li><a href="show?id=<?= $category["id"] ?>"> <?= htmlspecialchars($category["category_name"]) ?> </a></li> <!-- "?=" īsā php izvade (aizstāj - php echo) -->
+                <li><a href="show?id=<?= $category["id"] ?>"> <?= htmlspecialchars($category["category_name"]) ?> </a></li>
             <?php } ?>
         </ol>
     </div>
