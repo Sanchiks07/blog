@@ -9,18 +9,18 @@
             <input type="hidden" name="id" value="<?= $post["id"] ?>" />
         </label>
 
-        <select name="category_id">
-            <?php foreach ($categories as $category){ ?>
-                <option value="<?= $category["id"] ?>" <?= (isset($_POST["category_id"]) && $_POST["category_id"] == $category["id"]) ? "selected" : "" ?>>
-                <?= $category["category_name"] ?>
-                </option>
-            <?php } ?>
-        </select>
-
         <label>
-            <input type="text" name ="content" value="<?= $post["content"] ?? "" ?>" id="ieraksts" />
-            <textarea class="ieraksts" name="content" value="<?= $_POST['content'] ?? "" ?>"></textarea>
-            <button type="submit">Saglabāt</button>
+            <textarea class="ieraksts" name="content"><?= $post["content"] ?? "" ?></textarea>
+
+            <select name="category_id">
+                <?php foreach ($categories as $category){ ?>
+                    <option value="<?= $category["id"] ?>" <?= (isset($_POST["category_id"]) && $_POST["category_id"] == $category["id"]) ? "selected" : "" ?>>
+                    <?= $category["category_name"] ?>
+                    </option>
+                <?php } ?>
+            </select>
+
+            <br><button type="submit">Saglabāt</button>
         </label>
 
         <?php if(isset($errors["content"])) { ?>
