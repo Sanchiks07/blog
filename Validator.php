@@ -9,7 +9,7 @@ class Validator {
                 && strlen($value) <= $max;
     }
 
-    public static function numer($value, $min = 1, $max = INF) {
+    public static function number($value, $min = 1, $max = INF) {
         $value = trim($value);
 
         return  is_numeric($value)

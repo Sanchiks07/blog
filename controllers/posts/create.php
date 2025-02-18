@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!Validator::string($_POST["content"], max: 50)) {
         $errors["content"] = "Saturam jābūt ievadītam, bet ne garākam par 50 rakstzīmēm";
     }
-    if (!empty($_POST["category_id"]) && !Validator::numer($_POST["category_id"])) {
+    if (!empty($_POST["category_id"]) && !Validator::number($_POST["category_id"])) {
         $errors["category_id"] = "Saturam jābūt ievadītam";
     }
     else if (empty($errors)) {

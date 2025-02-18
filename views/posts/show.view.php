@@ -3,7 +3,7 @@
 
 <div class="container">
     <h1><?= htmlspecialchars($post["content"]) ?></h1>
-    <p><?= $post["category_name"] ?></p>
+    <p><?= $post["category_name"] ?? "Nav izvēlēta kategorija" ?></p>
 
     <button class="edit" onclick="location.href='edit?id=<?= $post['id'] ?>'">Rediģēt</button>
 

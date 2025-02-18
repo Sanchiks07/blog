@@ -15,6 +15,7 @@
         <label><textarea class="ieraksts" name="content" placeholder="Izveidot ierakstu.." ><?= $_POST['content'] ?? "" ?></textarea></label>
 
         <select name="category_id">
+            <option value="0">Bez kategorijas</option>
             <?php foreach ($categories as $category){ ?>
                 <option value="<?= $category["id"] ?>" <?= (isset($_POST["category_id"]) && $_POST["category_id"] == $category["id"]) ? "selected" : "" ?>>
                 <?= $category["category_name"] ?>

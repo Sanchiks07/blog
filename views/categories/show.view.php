@@ -4,11 +4,11 @@
 <div class="container">
     <h1><?= htmlspecialchars($post["category_name"]) ?></h1>
 
-    <button onclick="location.href='edit?id=<?= $post['id'] ?>'">Rediģēt</button>
+    <button class="edit" onclick="location.href='edit?id=<?= $post['id'] ?>'">Rediģēt</button>
 
     <form method="POST" action="/categories/delete">
         <input name="id" value="<?= $post["id"] ?>" type="hidden" />
-        <input type="submit" value="Dzēst" />
+        <button class="delete">Dzēst</button>
     </form>
 </div>
     
