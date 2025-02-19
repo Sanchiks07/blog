@@ -19,3 +19,8 @@ class Validator {
 }
 
 ?>
+
+<!--
+    static function - nevajag izveidot jaunu mainīgo or smt, izmantojot Validator var uzreiz izsaukt funkciju (pats jau ir klase, takā to nevajag)
+    parasts function - vajag veidot klasi un mainīgo(myb)
+-->
